@@ -36,10 +36,9 @@ while($row = mysqli_fetch_array($res))
     <td><div align="center"><?php echo $row['Price'];?></div></td>
     <td><div align="center"><?php echo $row['Discount'];?></div></td>
     <td><div align="center"><?php echo $row['Total'];?></div></td>
-    <form action="edit.php" method="POST">
     <td><div align="center">
     <a href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a>
-    </div></td>
+    </td>
   </tr>
 <?php
 }
