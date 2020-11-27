@@ -37,7 +37,7 @@ while($row = mysqli_fetch_array($res))
     <td><div align="center"><?php echo $row['Discount'];?></div></td>
     <td><div align="center"><?php echo $row['Total'];?></div></td>
     <td><div align="center">
-    <a href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a>
+    <a href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a></div>
     </td>
   </tr>
 <?php
@@ -45,9 +45,7 @@ while($row = mysqli_fetch_array($res))
 ?>
 </table>
 </div>
-<div class="btn btn-primary" align="center"><a href="form.html" class="btn btn-primary">Add</a>
 
-</div>
 <?php
 mysqli_close($conn);
 ?>
