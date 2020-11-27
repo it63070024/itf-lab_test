@@ -8,12 +8,12 @@ if (mysqli_connect_errno($conn))
 }
 
 $id = $_POST['ID'];
-$a = $_POST['A'];
-$b = $_POST['B'];
+$discount = $_POST['Discount'];
+$price = $_POST['Price'];
 
 
 
-$sql = "UPDATE lab_data SET A='$a', B='$b', C='$a'+'$b' WHERE ID=$id";
+$sql = "UPDATE lab_data SET Discount='$discount', Price='$price', Total='$price'-('$discount'/100) WHERE ID=$id";
 
 
 if (mysqli_query($conn, $sql)) {

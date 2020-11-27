@@ -21,9 +21,10 @@ $res = mysqli_query($conn, 'SELECT * FROM lab_data');
 <div class="table-responsive">
 <table class="table table-dark table-striped">
   <thead>
-    <th> <center>A</center></th>
-    <th> <center>B</center></th>
-    <th> <center>C</center></th>
+    <th> <center>Product Name</center></th>
+    <th> <center>Price/Unit</center></th>
+    <th> <center>Discount</center></th>
+    <th> <center>Dis. Price</center><th>
     <th> <center>Action</center></th>
   </thead>
 <?php
@@ -31,13 +32,13 @@ while($row = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><div align="center"><?php echo $row['A'];?></div></td>
-    <td><div align="center"><?php echo $row['B'];?></div></td>
-    <td><div align="center"><?php echo $row['C'];?></div></td>
+    <td><div align="center"><?php echo $row['Product'];?></div></td>
+    <td><div align="center"><?php echo $row['Price'];?></div></td>
+    <td><div align="center"><?php echo $row['Discount'];?></div></td>
+    <td><div align="center"><?php echo $row['Total'];?></div></td>
     <form action="edit.php" method="POST">
     <td><div align="center">
     <a href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a>
-    <a href="delete.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">DELETE</a>
     </div></td>
   </tr>
 <?php

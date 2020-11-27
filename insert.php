@@ -7,12 +7,12 @@ mysqli_real_connect($conn, 'it63070024-itf-lab13-database-php.mysql.database.azu
 }
 
 
-$a = $_POST['A'];
-$b = $_POST['B'];
+$product = $_POST['Product'];
+$price = $_POST['Price'];
+$discount = $_POST['Discount'];
 
 
-
-$sql = "INSERT INTO lab_data (A , B , C) VALUE ('$a', '$b', '$a'+'$b')";
+$sql = "INSERT INTO lab_data (Product, Price, Discount, Total) VALUE ('$product', '$price','$discount', '$product'-('$discount'/100)";
 
 if (mysqli_query($conn, $sql)) {
     header('Location: ./');

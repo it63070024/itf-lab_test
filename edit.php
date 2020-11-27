@@ -22,13 +22,13 @@ $row = mysqli_fetch_array($result);
 			<form action="insert_edit.php" method="post">
 				<input type="hidden" name="ID" value="<?php echo $row['ID']; ?>"> 
 				<div class="form-group">
-					A : <input type="int" name="A" required value="<?php echo $row['A'];?>" class="form-control" > 
+					Price per unit : <input type="float" name="Price" required value="<?php echo $row['Price'];?>" class="form-control" > 
 				</div>
 				<div class="form-group">
-					B : <input type="int" name="B" required value="<?php echo $row['B'];?>" class="form-control" >
+					Discount : <input type="int" name="Discount" required value="<?php echo $row['Discount'];?>" class="form-control" >
 				</div>
 				<div class="form-group">
-					<button class="btn btn-success" type="submit" >Save</button>
+					<button class="btn btn-success" type="submit" >Submit</button>
 				</div>
 			</form>
 		</div>
