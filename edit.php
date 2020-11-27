@@ -27,7 +27,6 @@ $row = mysqli_fetch_array($result);
 				<div class="form-group">
 					B : <input type="int" name="B" required value="<?php echo $row['B'];?>" class="form-control" >
 				</div>
-				<input type="hiden" name="C" value="<?php echo $row['A']+$row['B'];?>">
 				<div class="form-group">
 					<button class="btn btn-success" type="submit" >Save</button>
 				</div>

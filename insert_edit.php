@@ -10,10 +10,10 @@ if (mysqli_connect_errno($conn))
 $id = $_POST['ID'];
 $a = $_POST['A'];
 $b = $_POST['B'];
-$c = $_POST['C'];
 
 
-$sql = "UPDATE guestbook SET A='$a', B='$b', C='$c' WHERE ID=$id";
+
+$sql = "UPDATE guestbook SET A='$a', B='$b', C='a'+'$b' WHERE ID=$id";
 
 
 if (mysqli_query($conn, $sql)) {
