@@ -16,7 +16,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM lab_data');
+$res = mysqli_query($conn, 'SELECT *,FORMAT(Total,2) FROM lab_data');
 ?>
 <div class="table-responsive">
 <table class="table table-dark table-striped">
@@ -34,7 +34,7 @@ while($row = mysqli_fetch_array($res))
   <tr>
     <td><div align="center"><?php echo $row['Product'];?></div></td>
     <td><div align="center"><?php echo $row['Price'];?></div></td>
-    <td><div align="center"><?php echo number_format("$row['Discount'],2).'<br>';?",></div></td>
+    <td><div align="center"><?php echo $row['Discount'];?></div></td>
     <td><div align="center"><?php echo $row['Total'];?></div></td>
     <td><a align="center" href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a></td>
   </tr>
