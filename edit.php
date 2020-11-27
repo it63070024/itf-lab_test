@@ -5,7 +5,7 @@ if (mysqli_connect_errno($conn)){
 	die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$id = $_POST['id'];
+$id = $_GET['id'];
 $result = mysqli_query($conn, "SELECT * FROM lab_data WHERE ID=$id");
 $row = mysqli_fetch_array($result);
 ?>

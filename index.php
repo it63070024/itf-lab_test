@@ -36,14 +36,10 @@ while($row = mysqli_fetch_array($res))
     <td><div align="center"><?php echo $row['C'];?></div></td>
     <form action="edit.php" method="POST">
     <td><div align="center">
-    <input type="hidden" name="ID" value="<?php echo $row['ID']; ?>">
-    <button class="btn btn-warning" type="submit" >Edit</button>
-    <form action="delete.php" method="POST">
-    <input type="hidden" name="ID" value="<?php echo $row['ID']; ?>">
-    <button class="btn btn-danger" type="submit" >Delele</button>
+    <button class="btn btn-warning" type="button" value="<?php echo $row['ID']; ?>">Edit</button>
+    
+    <button class="btn btn-danger" type="button" value="<?php echo $row['ID']; ?>">Delele</button>
     </div></td>
-    </form>
-
   </tr>
 <?php
 }
