@@ -25,7 +25,7 @@ $res = mysqli_query($conn, 'SELECT * FROM lab_data');
     <th> <center>Price/Unit</center></th>
     <th> <center>Discount</center></th>
     <th> <center>Dis. Price</center><th>
-    <th> <center>Action</center></th>
+    <th> </th>
   </thead>
 <?php
 while($row = mysqli_fetch_array($res))
@@ -34,7 +34,7 @@ while($row = mysqli_fetch_array($res))
   <tr>
     <td><div align="center"><?php echo $row['Product'];?></div></td>
     <td><div align="center"><?php echo $row['Price'];?></div></td>
-    <td><div align="center"><?php echo $row['Discount'];?></div></td>
+    <td><div align="center"><?php echo number_format("$row['Discount'],2).'<br>';?",></div></td>
     <td><div align="center"><?php echo $row['Total'];?></div></td>
     <td><a align="center" href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a></td>
   </tr>

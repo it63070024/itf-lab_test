@@ -22,7 +22,7 @@ $row = mysqli_fetch_array($result);
 			<form action="insert_edit.php" method="post">
 				<input type="hidden" name="ID" value="<?php echo $row['ID']; ?>"> 
 				<div class="form-group">
-					Price per unit : <input type="float" name="Price" required value="<?php echo $row['Price'];?>" class="form-control" > 
+					Price per unit : <input type="float" onchange="setTwoNumberDecimal" name="Price" required value="<?php echo $row['Price'];?>" class="form-control" > 
 				</div>
 				<div class="form-group">
 					Discount : <input type="int" name="Discount" required value="<?php echo $row['Discount'];?>" class="form-control" >
