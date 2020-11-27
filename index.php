@@ -34,7 +34,7 @@ while($row = mysqli_fetch_array($res))
   <tr>
     <td><div align="center"><?php echo $row['Product'];?></div></td>
     <td><div align="center"><?php echo $row['Price'];?></div></td>
-    <td><div align="center"><?php echo $row['Discount'];?></div></td>
+    <td><div align="center"><?php echo $row['Discount'];?><a>%</a></div></td>
     <td><div align="center"><?php echo $row['Total'];?></div></td>
     <td><a align="center" href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a></td>
   </tr>
