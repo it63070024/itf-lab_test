@@ -36,14 +36,18 @@ while($row = mysqli_fetch_array($res))
     <td><div align="center"><?php echo $row['Price'];?></div></td>
     <td><div align="center"><?php echo $row['Discount'];?><a>%</a></div></td>
     <td><div align="center"><?php echo $row['Total'];?></div></td>
-    <td><a align="center" href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a></td>
+    <td><a align="center" href="edit.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">EDIT</a>
+    <a align="center" href="delete.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">DELETE</a></td>
   </tr>
 <?php
 }
 ?>
 </table>
 </div>
+</div>
+<div class="btn btn-primary" align="center"><a href="form.html" class="btn btn-primary">Comment</a>
 
+</div>
 <?php
 mysqli_close($conn);
 ?>
