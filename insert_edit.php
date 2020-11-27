@@ -13,7 +13,7 @@ $price = $_POST['Price'];
 
 
 
-$sql = "UPDATE lab_data SET Discount='$discount', Price='$price', Total='$price'-'($discount/100)' WHERE ID=$id";
+$sql = "UPDATE lab_data SET Discount='$discount', Price='$price', Total='$price' WHERE ID=$id";
 
 
 if (mysqli_query($conn, $sql)) {
