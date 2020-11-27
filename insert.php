@@ -9,11 +9,10 @@ mysqli_real_connect($conn, 'it63070024-itf-lab13-database-php.mysql.database.azu
 
 $a = $_POST['A'];
 $b = $_POST['B'];
-$c = $_POST['C'];
 
 
-$sql = "INSERT INTO guestbook (A , B , C) VALUES ('$a', '$b', '$c')";
 
+$sql = "INSERT INTO lab_data (A , B , C) value ($a, $b, $a+$b)
 
 if (mysqli_query($conn, $sql)) {
     header('Location: ./');
