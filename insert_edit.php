@@ -13,7 +13,7 @@ $b = $_POST['B'];
 
 
 
-$sql = "UPDATE guestbook SET A='$a', B='$b', C='$a'+'$b' WHERE ID=$id";
+$sql = "UPDATE lab_data SET A='$a', B='$b', C='$a'+'$b' WHERE ID=$id";
 
 
 if (mysqli_query($conn, $sql)) {
