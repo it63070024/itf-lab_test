@@ -12,7 +12,7 @@ $b = $_POST['B'];
 
 
 
-$sql = "INSERT INTO lab_data (A , B , C) VALUE ('$a', '$b', '$a'+'$b')
+$sql = "INSERT INTO lab_data (A , B , C) VALUE ('$a', '$b', '$a'+'$b')";
 
 if (mysqli_query($conn, $sql)) {
     header('Location: ./');
